@@ -65,3 +65,19 @@ figure {
 	justify-content: center;    /* centraliza título */
 	position: relative;         /* base para posicionamento */
  } 
+ 
+ #Tema {
+	position: absolute;
+	right: 15px; 			/* posiciona o botão à direita */
+	padding: 5px 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer; 	/* muda o cursor ao passar por cima */
+	background: var(--cor-footer);
+	color: var(--cor-branco);
+	font-size: 14px;
+	background: none; 	/* remove o fundo */
+	font-size: 20px;
+	border: none;
+	cursor: pointer;
+} 
