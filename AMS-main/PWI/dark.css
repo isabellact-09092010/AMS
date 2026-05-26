@@ -1,0 +1,21 @@
+:root{
+    /*MODO CLARO*/
+    --cor-fundo: #ececec;
+--cor-header: #004d00;
+--cor-footer: #009680;
+--cor-texto: #222;
+--cor-borda: #cecece;
+--cor-branco: #fff;
+--cor-sombra: #ccc;
+}
+
+/*MODO ESCURO*/
+.dark {
+    --cor-fundo: #121212;
+    --cor-header: #1f1f1f;
+    --cor-footer: #2c2c2c;
+    --cor-texto: #f1f1f1;
+    --cor-branco: #1e1e1e;
+--cor-borda: #444;
+--cor-sombra: #000;
+}
