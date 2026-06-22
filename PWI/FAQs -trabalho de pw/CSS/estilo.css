@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Jim+Nightshade&family=Krona+One&display=swap');
+
 :root {
-    --cor-principal:#0077cc;
-    --cor-houver: #00bfff;
-    --cor-voltar: #ff6600;
-    --cor-fundo: #f1f1f1; 
+    --cor-principal: #a868c4;
+    --cor-houver: #452855;
+    --cor-voltar: #3A6F43;
+    --cor-fundo: #F3E2D4; 
     --cor-texto: #333;
 }
 
@@ -20,9 +22,13 @@ header {
     z-index: 1000;
 }
 
+header h1 {
+    font-family:  "Jim Nightshade", cursive;
+}
+
 main {
     width: 90%;
-    max-width: 100px;
+    max-width: 1050px;
     margin: 40px auto;
 }
 
@@ -36,6 +42,8 @@ body {
 
 nav a {
     color: var(--cor-houver) !important;
+    text-decoration: none;
+    margin: 10px;
 
 }
 
@@ -43,7 +51,7 @@ nav a {
     text-decoration: none;
     color: var(--cor-principal);
     font-weight: bold;
-    transition: 0.3s: ;
+    transition: 0.3s ;
 }
 .voltar:houver {
     color: var(--cor-voltar)
