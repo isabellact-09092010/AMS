@@ -5,41 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de cadastro</title>
 </head>
-
 <body>
     <main class="container">
         <h1>
-            <span class="Vermelho sublinhado">Desafio</span>
-            <span class="sublinhado">Formulário de Cadastro</span>
+            <span class="vermelho sublinhado">Desafio</span>
+            <span class="sublinhado">Formulário de cadastro</span>
         </h1>
-        
-        <form action="#" method="post" id="FormCadastro" enctype="multipart/form-data">
-            <div class="form-grid">
-                <div class="campo">
-                    <label for="nome" class="título">
-                        <span class="icone">&#128100:</span>
-                        <span>
-                        <span class="sublinhado">nome</span>
+
+        <form action="#" method="post" enctype="multipart/form-data" id="FormCadastro">
+            <div>
+            <div class="campo">
+                <label for="nome" class="titulo">
+                    <span class="icone">&#128100;</span>
+                    <span>
+                        <span class="sublinhado">Nome</span>
                         <span class="tipo">(text)</span>
-                        </span>
-                    </label>
-                    <imput type="text" name="nome" id="nome" placeholder="digite seu nome" required>
-                </div>
-                <div class="campo">
-                    <label for="nome" class="título">
-                        <span class="icone">&#128100:</span>
-                        <span>
-                        <span class="sublinhado">nome</span>
-                        <span class="tipo">(text)</span>
-                        </span>
-                    </label>
-                    <imput type="text" name="nome" id="nome" placeholder="digite seu nome" required>
-                </div>
+                    </span>
+                </label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
             </div>
+            <div class="campo">
+                <label for="email" class="titulo">
+                  <span class="icone">&#9993;</span>
+                  <span>
+                     <span class="sublinhado">E-mail</span>
+                     <span class="tipo">(email)</span>
+                  </span>
+                  </label>
+                 <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+             </div>
+               <div class="campo">
+                <label for="senha" class="titulo">
+                  <span class="icone">&#128274;</span>
+                  <span>
+                     <span class="tipo">(senha)</span>
+                  </span>
+                  </label>
+                 <input type="password" name="senha" id="senha" minlength="6" placeholder="Digite sua senha" required>
+             </div>
+               <div class="campo">
+                <label for="data_nascimento" class="titulo">
+                  <span class="icone">&#128197;</span>
+                  <span>
+                     <span class="sublinhado">Data de Nascimento</span>
+                     <span class="tipo">(date)</span>
+                  </span>
+                  </label>
+                 <input type="date" name="data_nascimento" id="data_nascimento" required>
+             </div>
 
+             <div class="campo">
+                <label class="titulo">
+                    <span class="icone">&#9895;</span>
+                    <span>
+                        <span class="sublinhado">Gênero</span>
+                        <span class="tipo">(radio)</span>
+                    </span>
+                </label>
+                <div class="radio-container">
+                    <label><input type="radio" name="genero" value="Masculino">Masculino
+                    </label>
+                    <label><input type="radio" name="genero" value="Feminino">Feminino
+                    </label>
+                    <label><input type="radio" name="genero" value="Outro">Outro
+                    </label>
+                </div>
+                <div class="campo">
+                    <label for="estado_civil" class="titulo">
+                        <span class="icone">&#128141;</span>
+                         <span>
+                            <span class="sublinhado">Estado Civil</span>
+                            <span class="tipo">(select)</span>
+                        </span>
+                </label>
+            </div>
+             </div>
 
-
-        </form>
-    </main>
+         </div>
+     </form>
+   </main>
 </body>
 </html>
