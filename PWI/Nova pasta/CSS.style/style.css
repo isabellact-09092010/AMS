@@ -1,4 +1,4 @@
-      * {
+             * {
             box-sizing: border-box;
         }
 
@@ -22,7 +22,7 @@
 
         h1 span {
             color: #ed1b2f;
-            text-decoration: underline;
+            text-decoration: none;
         }
 
         .formulario {
@@ -35,9 +35,10 @@
         .campo {
             display: flex;
             flex-direction: column;
+            text-decoration: none;
         }
 
-          label {
+        label {
             font-size: 23px;
             margin-bottom: 12px;
         }
@@ -69,12 +70,11 @@
             margin-top: 3px;
         }
 
-        .genero label {
+        .radio-container {
             font-size: 18px;
             display: flex;
             align-items: center;
             gap: 5px;
-            margin-top: center;
         }
 
         .genero input {
