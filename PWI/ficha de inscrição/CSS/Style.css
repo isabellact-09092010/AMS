@@ -1,0 +1,303 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #222;
+}
+
+.container {
+    width: 600px;
+    margin: 0 auto;
+    background: #ccc;
+    border: 2px solid #555;
+    padding: 0 6px 6px;
+}
+
+
+h1 {
+    height: 58px;
+    margin: 0 -6px 0;
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+
+    background: #fff;
+    border-bottom: 3px solid #666;
+
+    font-size: 0;
+}
+
+h1::before {
+    content: "CENTRO\A PAULA SOUZA";
+    white-space: pre;
+
+    width: 170px;
+
+    color: #c41624;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 13px;
+}
+
+h1::after {
+    content: "ETEC  MonSenhor Antônio Magliano";
+
+    margin-left: auto;
+
+    color: #111;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+h1 span {
+    display: none;
+}
+
+form {
+    width: 100%;
+    background: #ccc;
+}
+
+.campo {
+    margin: 0;
+    padding: 0;
+}
+
+.titulo {
+    display: block;
+    margin: 0;
+    padding: 2px 3px;
+
+    color: #222;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.sublinhado {
+    text-decoration: none;
+}
+
+.tipo {
+    font-size: 12px;
+}
+
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="CPF"],
+input[type="Endereco"],
+input[type="numero"],
+input[type="Comlemento"],
+input[type="Bairro"],
+input[type="cidade"],
+input[type="CEP"],
+input[type="Telefone"],
+input[type="celular"],
+input[type="Ano_conclusao"] {
+    height: 18px;
+
+    padding: 1px 3px;
+
+    border: 1px solid #aaa;
+    border-radius: 0;
+
+    background: #fff;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+
+    outline: none;
+}
+
+input:focus {
+    border-color: #666;
+}
+
+#nome {
+    width: 100%;
+}
+
+#data_nascimento {
+    width: 95px;
+}
+
+#Doc {
+    width: 135px;
+}
+
+#CPF {
+    width: 115px;
+}
+
+#Endereco {
+    width: 355px;
+}
+
+#numero {
+    width: 58px;
+}
+
+#Complemento {
+    width: 168px;
+}
+
+#Bairro {
+    width: 170px;
+}
+
+#cidade {
+    width: 315px;
+}
+
+select {
+    height: 19px;
+
+    border: 1px solid #999;
+    border-radius: 0;
+
+    background: #fff;
+
+    font-size: 12px;
+}
+
+#estado,
+select {
+    min-width: 100px;
+}
+
+#CEP {
+    width: 95px;
+}
+
+#Telefone {
+    width: 135px;
+}
+
+#celular {
+    width: 135px;
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 2px 3px;
+}
+
+.radio-container label {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+input[type="radio"] {
+    width: 13px;
+    height: 13px;
+
+    margin: 0;
+}
+
+#email {
+    width: 225px;
+}
+
+#Ano_conclusao {
+    width: 120px;
+}
+
+
+.campo:has(#Ano_conclusao) {
+    display: inline-block;
+}
+
+.botao {
+    height: 21px;
+
+    margin-top: 10px;
+    margin-right: 5px;
+    padding: 1px 10px;
+
+    border: 1px solid #aaa;
+    border-radius: 0;
+
+    background: linear-gradient(#fff, #ddd);
+
+    color: #111;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.botao:hover {
+    background: #eee;
+}
+
+.botao:active {
+    background: #ccc;
+}
+
+#nome {
+    display: block;
+}
+
+#data_nascimento,
+#Doc,
+#CPF {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 5px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    h1::before {
+        width: 130px;
+        font-size: 10px;
+    }
+
+    h1::after {
+        font-size: 12px;
+    }
+
+    input,
+    select {
+        max-width: 100%;
+    }
+
+    #Endereco {
+        width: 60%;
+    }
+
+    #Complemento {
+        width: 30%;
+    }
+
+    #cidade {
+        width: 50%;
+    }
+}
