@@ -1,266 +1,327 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Formulário de cadastro</title>
+    <title>Ficha de Inscrição</title>
 </head>
+
 <body>
+
     <main class="container">
-        <h1>
-            <span class="vermelho"></span>
-            <span class="sublinhado">Formulário de cadastro</span>
-        </h1>
 
-        <form action="#" method="post" enctype="multipart/form-data" id="FormCadastro">
-            <div>
-            <div class="campo">
-                <label for="nome" class="titulo">
-                    <span>
-                        <span class="sublinhado">Nome do candidato</span>
-                    </span>
-                </label>
-                <input type="text" name="nome" id="nome">
-            </div>
-              <div class="campo">
-                <label for="data_nascimento" class="titulo">
-                  <span>
-                     <span class="sublinhado">Data de</span>
-                  </span>
-                  </label>
-                 <input type="date" name="data_nascimento" id="data_nascimento" required>
-             </div>
+        <!-- CABEÇALHO -->
+        <header class="cabecalho">
 
-            <div class="campo">
-                <label for="nome" class="titulo">
-                    <span>
-                        <span class="sublinhado">Documento de</span>
-                    </span>
-                </label>
-                <input type="text" name="Doc" id="Doc">
+            <div class="centro">
+                <span>CENTRO</span>
+                <strong>PAULA SOUZA</strong>
             </div>
 
-            <div class="campo">
-                <label for="CPF" class="titulo">
-                  <span>
-                     <span class="sublinhado">CPF</span>
-                  </span>
-                  </label>
-                 <input type="CPF" name="CPF" id="CPF">
-             </div>
+            <div class="governo">
+                <small>GOVERNO DO ESTADO</small>
+                <strong>SÃO PAULO</strong>
+            </div>
 
-             <div class="campo">
-                <label class="titulo">
-                    <span>
-                        <span class="sublinhado">Sexo</span>
-                    </span>
-                </label>
-                <div class="radio-container">
-                    <label><input type="radio" name="genero" value="Masculino">M
+            <div class="etec">
+                <strong>ETEC</strong>
+                <span>MonSenhor Antônio Magliano</span>
+            </div>
+
+        </header>
+
+        <!-- TÍTULO -->
+        <div class="titulo-formulario">
+            Ficha de Inscrição
+        </div>
+
+        <form id="FormCadastro">
+
+            <!-- NOME -->
+            <div class="linha nome">
+                <label>Nome do Candidato</label>
+                <input type="text" name="nome">
+            </div>
+
+            <!-- DATA / DOCUMENTO / CPF / SEXO -->
+            <div class="linha linha-dados">
+
+                <div class="campo data">
+                    <label>Data de</label>
+                    <input type="text" name="data">
+                </div>
+
+                <div class="campo documento">
+                    <label>Documento de</label>
+                    <input type="text" name="documento">
+                </div>
+
+                <div class="campo cpf">
+                    <label>CPF</label>
+                    <input type="text" name="cpf">
+                </div>
+
+                <div class="campo sexo">
+                    <label>Sexo</label>
+
+                    <div class="radios">
+                        <label>
+                            <input type="radio" name="sexo" value="M">
+                            M
+                        </label>
+
+                        <label>
+                            <input type="radio" name="sexo" value="F">
+                            F
+                        </label>
+                    </div>
+                </div>
+
+                <div class="campo mao">
+                    <label>
+                        <input type="radio" name="mao" value="destro">
+                        Destro
                     </label>
-                    <label><input type="radio" name="genero" value="Feminino">F
+
+                    <label>
+                        <input type="radio" name="mao" value="canhoto">
+                        Canhoto
                     </label>
                 </div>
 
-                  <div class="campo">
-                <div class="radio-container">
-                    <label><input type="radio" name="mao" value="Destro">Destro
-                    </label>
-                    <label><input type="radio" name="mao" value="Canhoto">Canhoto
-                    </label>
-                </div>
-                
-                 <div class="campo">
-                <label for="Endereco" class="titulo">
-                  <span>
-                     <span class="sublinhado">Endereço</span>
-                      <span class="tipo">(Rua/Avenida, Praça)</span>
-                  </span>
-                  </label>
-                 <input type="Endereco" name="Endereco" id="Endereco">
-             </div>
-
-             <div class="campo">
-                <label for="numero" class="titulo">
-                  <span>
-                     <span class="sublinhado">Número</span>
-                  </span>
-                  </label>
-                 <input type="numero" name="numero" id="numero">
-             </div>
-
-             <div class="campo">
-                <label for="Complemento" class="titulo">
-                  <span>
-                     <span class="sublinhado">Complemento</span>
-                  </span>
-                  </label>
-                 <input type="Comlemento" name="Complemento" id="Complemento">
-             </div>
-
-             <div class="campo">
-                <label for="Bairro" class="titulo">
-                  <span>
-                     <span class="sublinhado">Bairro</span>
-                  </span>
-                  </label>
-                 <input type="Bairro" name="Bairro" id="Bairro">
-             </div>
-
-             <div class="campo">
-                <label for="cidade" class="titulo">
-                  <span>
-                     <span class="sublinhado">Cidade</span>
-                  </span>
-                  </label>
-                 <input type="cidade" name="cidade" id="cidade">
-             </div>
-
-               <div class="campo">
-                    <label for="estado" class="titulo">
-                         <span>
-                            <span class="sublinhado">Estado</span>
-                        </span>
-                             <select>
-                    <option value="">Selecione</option>
-                    <option>AC</option>
-                    <option>AL</option>
-                    <option>AP</option>
-                    <option>AM</option> 
-                    <option>BA</option>
-                    <option>CE</option>
-                    <option>ES</option>
-                    <option>GO</option>
-                    <option>DF</option>
-                    <option>MA</option>
-                    <option>MT</option>
-                    <option>MS</option>
-                    <option>MG</option>
-                    <option>PA</option>
-                    <option>PB</option>
-                    <option>PR</option>
-                    <option>PE</option>
-                    <option>PI</option>
-                    <option>RJ</option>
-                    <option>RN</option>
-                    <option>RS</option>
-                    <option>RO</option>
-                    <option>RR</option>
-                    <option>SC</option>
-                    <option>SP</option>
-                    <option>SE</option>
-                    <option>TO</option>
-                </select>
-                </label>
             </div>
-             </div>
 
-             <div class="campo">
-                <label for="CEP" class="titulo">
-                  <span>
-                     <span class="sublinhado">CEP</span>
-                  </span>
-                  </label>
-                 <input type="CEP" name="CEP" id="CEP">
-             </div> 
-
-             <div class="campo">
-                <label for="cidade" class="titulo">
-                  <span>
-                     <span class="sublinhado">Cidade</span>
-                  </span>
-                  </label>
-                 <input type="cidade" name="cidade" id="cidade">
-             </div>
-
-            <div class="campo">
-                <label for="Telefone" class="titulo">
-                  <span>
-                     <span class="sublinhado">Telefone</span>
-                  </span>
-                  </label>
-                 <input type="Telefone" name="Telefone" id="Telefone">
-             </div>
-
-             <div class="campo">
-                <label for="celular" class="titulo">
-                  <span>
-                     <span class="sublinhado">Celular</span>
-                  </span>
-                  </label>
-                 <input type="celular" name="celular" id="celular">
-             </div>
-
-             <div class="campo">
-                <div class="radio-container">
-                    <label><input type="radio" name="Escola" value="Publica">Escola Publica
-                    </label>
-                    <label><input type="radio" name="Escola" value="Particular">Escola Partucular
-                    </label>
-                </div>
-
-              <div class="campo">
-                <label for="email" class="titulo">
-                  <span>
-                     <span class="sublinhado">E-mail</span>
-                  </span>
-                  </label>
-                 <input type="email" name="email" id="email">
-             </div>
-              
-             <div class="campo">
-                <label for="Ano_conclusao" class="titulo">
-                  <span>
-                     <span class="sublinhado">Ano de conclusao do</span>
-                  </span>
-                  </label>
-                 <input type="Ano_conclusao" name="Ano_conclusao" id="Ano_conclusao">
-             </div>
-             
-                 <div class="campo">
-                <label class="titulo">
-                    <span>
-                        <span class="sublinhado">Treineiro</span>
-                    </span>
-                </label>
-                <div class="radio-container">
-                    <label><input type="radio" name="Treineiro" value="nao">Não
-                    </label>
-                    <label><input type="radio" name="Treineiro" value="sim">Sim
-                    </label>
-                </div>
-
-                <div class="campo">
-                    <label for="estado_civil" class="titulo">
-                         <span>
-                            <span class="sublinhado">Estado Civil</span>
-                        </span>
-                             <select>
-                    <option value="">Selecione</option>
-                    <option>Solteiro(a)</option>
-                    <option>Casado(a)</option>
-                    <option>Divorciado(a)</option>
-                    <option>Viúvo(a)</option>
-                </select>
-                </label>
+            <!-- ENDEREÇO -->
+            <div class="linha endereco-titulo">
+                Endereço
             </div>
-             </div>
-            
- <button class="botao" type="submit">
-                Enviar
-            </button>
 
-            <button class="botao" type="submit">
-                Limpar
-            </button>
+            <div class="linha linha-endereco">
 
-            <button class="botao" type="submit">
-                Imprimir
-            </button>
+                <div class="campo endereco">
+                    <label>Endereço (Rua/Avenida, Praça)</label>
+                    <input type="text" name="endereco">
+                </div>
 
-         </div>
-     </form>
-   </main>
+                <div class="campo numero">
+                    <label>Número</label>
+                    <input type="text" name="numero">
+                </div>
+
+                <div class="campo complemento">
+                    <label>Complemento</label>
+                    <input type="text" name="complemento">
+                </div>
+
+            </div>
+
+            <!-- BAIRRO / CIDADE / ESTADO -->
+            <div class="linha linha-local">
+
+                <div class="campo bairro">
+                    <label>Bairro</label>
+                    <input type="text" name="bairro">
+                </div>
+
+                <div class="campo cidade">
+                    <label>Cidade</label>
+                    <input type="text" name="cidade">
+                </div>
+
+                <div class="campo estado">
+                    <label>Estado</label>
+                    <select name="estado">
+                        <option value="">Selecione...</option>
+                        <option>AC</option>
+                        <option>AL</option>
+                        <option>AP</option>
+                        <option>AM</option>
+                        <option>BA</option>
+                        <option>CE</option>
+                        <option>DF</option>
+                        <option>ES</option>
+                        <option>GO</option>
+                        <option>MA</option>
+                        <option>MT</option>
+                        <option>MS</option>
+                        <option>MG</option>
+                        <option>PA</option>
+                        <option>PB</option>
+                        <option>PR</option>
+                        <option>PE</option>
+                        <option>PI</option>
+                        <option>RJ</option>
+                        <option>RN</option>
+                        <option>RS</option>
+                        <option>RO</option>
+                        <option>RR</option>
+                        <option>SC</option>
+                        <option>SP</option>
+                        <option>SE</option>
+                        <option>TO</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <!-- CEP / TELEFONE / CELULAR / ESCOLA -->
+            <div class="linha linha-contato">
+
+                <div class="campo cep">
+                    <label>CEP</label>
+                    <input type="text" name="cep">
+                </div>
+
+                <div class="campo telefone">
+                    <label>Telefone</label>
+                    <input type="text" name="telefone">
+                </div>
+
+                <div class="campo celular">
+                    <label>Celular</label>
+                    <input type="text" name="celular">
+                </div>
+
+                <div class="escola">
+
+                    <label>
+                        <input type="radio" name="escola" value="publica">
+                        Escola Pública
+                    </label>
+
+                    <label>
+                        <input type="radio" name="escola" value="particular">
+                        Escola Particular
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- EMAIL / ANO / TREINEIRO -->
+            <div class="linha linha-email">
+
+                <div class="campo email">
+                    <label>E-Mail</label>
+                    <input type="email" name="email">
+                </div>
+
+                <div class="campo conclusao">
+                    <label>Ano de conclusão do</label>
+                    <input type="text" name="ano_conclusao">
+                </div>
+
+                <div class="treineiro">
+
+                    <span>Treineiro</span>
+
+                    <label>
+                        <input type="radio" name="treineiro" value="sim">
+                        Sim
+                    </label>
+
+                    <label>
+                        <input type="radio" name="treineiro" value="nao">
+                        Não
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- NECESSIDADES ESPECIAIS -->
+            <div class="necessidades">
+
+                <div class="necessidades-titulo">
+                    É Portador de Necessidades Especial?
+                </div>
+
+                <div class="checkboxes">
+
+                    <label>
+                        <input type="checkbox" name="deficiente_visual">
+                        Deficiente Visual
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="deficiente_auditivo">
+                        Deficiente Auditivo
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="deficiente_fisico">
+                        Deficiente Físico
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="multiplas">
+                        Múltiplas Deficiências
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="outros">
+                        Outros:
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- PARTE INFERIOR -->
+            <div class="parte-inferior">
+
+                <!-- CURSO -->
+                <div class="curso">
+
+                    <div class="curso-titulo">
+                        Opção de Curso
+                    </div>
+
+                    <select name="curso">
+                        <option value=""></option>
+                        <option>Administração</option>
+                        <option>Desenvolvimento de Sistemas</option>
+                        <option>Enfermagem</option>
+                        <option>Informática</option>
+                    </select>
+
+                    <div class="curso-verso">
+                        Tabela de Curso no Verso.
+                    </div>
+
+                </div>
+
+                <!-- AVISO -->
+                <div class="atencao">
+
+                    <strong>ATENÇÃO</strong>
+
+                    <p>
+                        Leia, preencha e recolha a taxa de
+                    </p>
+
+                    <b>
+                        R$50,00 na tesouraria do ETEC.
+                    </b>
+
+                </div>
+
+            </div>
+
+            <!-- BOTÕES -->
+            <div class="botoes">
+
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+                <button type="button" onclick="window.print()">Imprimir</button>
+
+            </div>
+
+        </form>
+
+    </main>
+
 </body>
 </html>
