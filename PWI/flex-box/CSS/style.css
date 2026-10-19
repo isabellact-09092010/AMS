@@ -1,5 +1,3 @@
-/* CONFIGURAÇÕES GERAIS */
-
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +10,6 @@ body {
     color: #222;
 }
 
-/* CABEÇALHO */
-
 .cabecalho {
     background-color: #111827;
     display: flex;
@@ -22,36 +18,192 @@ body {
     padding: 20px 8%;
 }
 
-/* LOGO */
-
 .logo {
     color: white;
     font-size: 28px;
     font-weight: bold;
+}
+.logo span {
+    color: #ef4444;
 }
 
 .menu {
     display: flex;
     gap: 25px;
 }
-
 .menu a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
-
 .menu a:hover {
     color: #ef4444;
 }
 
 .banner {
     min-height: 350px;
-    background: linear-gradient(135deg, #111827, #374151);
+    background: linear-gradient(135deg #111827, #374151);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 40px;
+}
+
+.banner-texto {
+    max-width: 700px;
+}
+
+.banner h1{
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.banner p{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #ef4444;
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.botao:hover{
+    background-color: #dc2626;
+}
+
+.main{
+    padding: 60px 8%;
+}
+
+.main h2{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.produtos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.produto{
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 260px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    flex: 1 1 260px;
+    max-width: 300px;
+}
+
+.produto:hover{
+    transform: translate(-5px);
+    transition: 0.3s;
+}
+
+.icone{
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.produto h3{
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.produto button{
+    border: none;
+    background-color: #111827;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.produto button:hover{
+    background-color: #ef4444;
+}
+
+.sobre{
+    background-color: white;
+    padding: 60px 8%;
+    display: flex;
+    align-items: center;
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+.sobre-texto h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.beneficios {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.beneficios div {
+    flex: 1 1 150px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.beneficios span {
+    font-size: 35px;
+}
+
+.beneficios h3 {
+    margin: 10px 0;
+}
+
+.beneficios p {
+    color: #666;
+}
+
+.contato {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #e5e7eb;
+}
+
+.contato h2 {
+    margin-bottom: 15px;
+}
+
+.footer {
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 700px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
