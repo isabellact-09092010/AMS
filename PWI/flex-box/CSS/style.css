@@ -39,10 +39,9 @@ body {
 .menu a:hover {
     color: #ef4444;
 }
-
 .banner {
     min-height: 350px;
-    background: linear-gradient(135deg #111827, #374151);
+    background: linear-gradient(135deg, #111827, #374151);
     color: white;
     display: flex;
     justify-content: center;
@@ -50,7 +49,6 @@ body {
     text-align: center;
     padding: 40px;
 }
-
 .banner-texto {
     max-width: 700px;
 }
@@ -75,44 +73,44 @@ body {
     font-weight: bold;
 }
 
-.botao:hover{
+.botao:hover {
     background-color: #dc2626;
 }
 
-.main{
+main {
     padding: 60px 8%;
 }
 
-.main h2{
+main h2 {
     text-align: center;
     margin-bottom: 40px;
     font-size: 32px;
 }
 
-.produtos{
+.produtos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
 }
 
-.produto{
+.produto {
     background-color: white;
     padding: 25px;
     border-radius: 12px;
     width: 260px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     flex: 1 1 260px;
     max-width: 300px;
 }
 
 .produto:hover{
-    transform: translate(-5px);
+    transform: translateY(-5px);
     transition: 0.3s;
 }
 
-.icone{
+.icone {
     font-size: 55px;
     margin-bottom: 15px;
 }
@@ -122,7 +120,20 @@ body {
     margin-bottom: 12px;
 }
 
-.produto button{
+.produto p{
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.produto strong {
+    display: block;
+    color: #ef4444;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.produto button {
     border: none;
     background-color: #111827;
     color: white;
@@ -132,19 +143,15 @@ body {
     font-weight: bold;
 }
 
-.produto button:hover{
+.produto button:hover {
     background-color: #ef4444;
 }
 
-.sobre{
+.sobre {
     background-color: white;
     padding: 60px 8%;
     display: flex;
     align-items: center;
-}
-
-.sobre-texto {
-    flex: 1;
 }
 
 .sobre-texto h2 {
@@ -163,23 +170,19 @@ body {
     flex-wrap: wrap;
     gap: 20px;
 }
-
-.beneficios div {
+.beneficios div{
     flex: 1 1 150px;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #f3f4f6;
     border-radius: 10px;
     text-align: center;
 }
-
 .beneficios span {
     font-size: 35px;
 }
-
 .beneficios h3 {
     margin: 10px 0;
 }
-
 .beneficios p {
     color: #666;
 }
@@ -189,21 +192,33 @@ body {
     text-align: center;
     background-color: #e5e7eb;
 }
-
 .contato h2 {
     margin-bottom: 15px;
 }
-
-.footer {
+footer {
     background-color: #111827;
     color: white;
     text-align: center;
     padding: 25px;
 }
-
 @media (max-width: 700px) {
     .cabecalho {
         flex-direction: column;
         gap: 20px;
+    }
+    .menu {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    .banner h1 {
+        font-size: 32px;
+    }
+    .sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+    .beneficios {
+        width: 100%;
     }
 }
