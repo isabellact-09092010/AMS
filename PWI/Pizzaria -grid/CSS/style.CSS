@@ -1,0 +1,91 @@
+:root {
+    --manjericao: #1f4d36;
+    --tomate: #e0422b;
+    --massa: #f3c969;
+    --branco: #fffdf7;
+    --carvao: #232323;
+    --espaco: clamp(1rem, 3vw, 2rem);
+}
+
+*,*::before, *::after { box-sizing: border-box; margin: 0; }
+
+body {
+    font-family: "bricolage Grotesque", system-ui, sans-serif;
+    color: var(--carvao);
+    background: var(--branco);
+    line-height: 1.5;
+}
+
+a { color: inherit; }
+ 
+body {
+    display: grid;
+    grid-template-columns: 1fr min(1100px, 100% - 2 * var(--espaco)) 1fr;
+    grid-template-areas: 
+    "topo     topo     topo"
+    "hero     hero     hero"
+    ".        cardapio ."
+    ".        galeria  ."
+    "visite   visite   visite"
+    "rodape   rodape   rodape";
+    row-gap: clamn(3rem, 8vw, 6rem);
+}
+
+.topo       { grid-area: topo; }
+.hero       { grid-area: hero; }
+.cardapio   { grid-area: cardapio; }
+.galeria    { grid-area: galeria; }
+.visite     { grid-area: visite; }
+.rodape     { grid-area: rodape; }
+
+.topo {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: var(--manjericao);
+    color: var(--branco);
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.nav {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    gap: var(--espaco);
+}
+.nav a {text-decoration: none; font-weight: 700; }
+.nav a {color: var(--massa); }
+
+.hero {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+    gap: var(--espaco);
+    padding: clamp(2rem, 6vw, 5rem) max(var(--espaco), calc((100% - 1100px) / 2));
+    background: var(--manjericao);
+    color: var(--branco);
+    margin-top: -6rem;
+    padding-top: calc(clamp(2rem, 6vw, 5rem) + 6rem);
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5.5vw, 4rem);
+    line-height: 1.05;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+.hero p {max-width: 45ch; margin-bottom: 1.5; }
+
+.hero__pizza {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 35%, var(--tomate) 0 7%, transparent 8%),
+    radial-gradient(circle at 65% 30%, var(--tomate) 0 7%,     transparent 8%),
+    radial-gradient(circle at 50% 62%, var(--tomate) 0 7%,     transparent 8%),  
+    radial-gradient(circle at 28% 68%, var(--tomate) 0 4%, transparent 5%);
+}
