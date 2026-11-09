@@ -87,5 +87,54 @@ body {
     background: radial-gradient(circle at 30% 35%, var(--tomate) 0 7%, transparent 8%),
     radial-gradient(circle at 65% 30%, var(--tomate) 0 7%,     transparent 8%),
     radial-gradient(circle at 50% 62%, var(--tomate) 0 7%,     transparent 8%),  
-    radial-gradient(circle at 28% 68%, var(--tomate) 0 4%, transparent 5%);
+    radial-gradient(circle at 28% 68%, var(--tomate) 0 4%, transparent 5%),
+    radial-gradient(circle at 72% 66%, var(--manjericao) 0 4% transparent 5%)
+    radial-gradient(circle at #fff3d6  0 62%, var(--tomate) 63% 82%, var(--massa) 83%);
+    box-shadow: 0 0 0 10px var(--massa);
+}
+
+.titulo__secao {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--manjericao);
+}
+
+.cardapio__lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--espaco);
+}
+
+.item {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 0.5rem;
+    padding: 1.25rem;
+    border: 2px solid var(--carvao);
+    border-radius: 12px;
+    position: relative;
+}
+
+.item h3 { font-size: 1.25rem; }
+.preco {font-weight: 800; color: var(--tomate); font-size: 1.2rem; }
+
+.item--destaque {
+    grid-column: span 2;
+    background: var(--tomate);
+    border-color: var(--tomate);
+    color: var(--branco);
+}
+
+.item--destaque .preco {color: var(--branco); font-size: 1.6rem;}
+
+.selo {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    background: var(--massa);
+    color: var(--carvao);
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
 }
