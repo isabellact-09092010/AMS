@@ -138,3 +138,95 @@ body {
     padding: 0.2rem 0.7rem;
     border-radius: 999px;
 }
+@media(max-width: 560px) {
+    .item--destaque {grid-column: auto;}
+}
+
+.galeria__grade {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 150px;
+    grid-auto-flow: dense;
+    gap: var(--espaco);
+}
+.foto {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 12px;
+    font-weight: 700;
+    color: var(--branco);
+    background: var(--manjericao);
+}
+
+foto:nth-child(2) {background: var(--tomate);}
+foto:nth-child(3) {background: var(--carvao);}
+foto:nth-child(4) {background: var(--massa); color: var(--carvao);}
+
+.foto--grade {grid-column: span 2; grid-row: span 2; font-size: 1.6rem;}
+.foto--larga {grid-column: span 2;}
+
+@media(max-width: 700px){
+    .galeria__grade {grid-template-columns: repeat(2, 1fr);}
+    .foto--grade {grid-column: span 2;}
+}
+
+.visite {
+    background: var(--massa);
+    padding: clamp(2rem, 6vw, 4rem)max(var(--espaco),calc((100% = 1100px)/2));
+}
+
+.visite__grade {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--espaco);
+}
+
+.caixa {
+    display: grid;
+    align-content: start;
+    gap: 0.4rem;
+    padding: 1.25rem;
+    background: var(--branco);
+    border-radius: 12px;
+}
+.caixa h3 {margin-bottom: 0.4rem;}
+.caixa--cta {background: var(--carvao); color: var(--branco)}
+
+@media (max-width: 800px) {
+    .visite__grade {grid-template-columns: 1fr;}
+}
+
+.rodape {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--espaco);
+    padding: 1,5rem var(--espaco);
+    margin-top: -6rem;
+    background: var(--carvao);
+    color: var(--branco);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .rodape {grid-template-columns: 1fr,}
+}
+
+.botao {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    background: var(--tomate);
+    color: var(--branco);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 999px;
+}
+.botao--claro {background: var(--massa); color: var(--carvao); margin-top: 0.5rem; text-align: center;}
+.botao:hover {filter: brightness(1.1);}
+a:focus-visible {outline: 3px solid var(--massa); outline-offset: 3px;}
+
+@media(max-width: 700px) {
+    .hero{grid-template-columns: 1fr;}
+    .hero__pizza {width: min(70%, 280px);justify-self: center;}
+}
